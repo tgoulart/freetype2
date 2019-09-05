@@ -451,6 +451,11 @@ set_target_properties(
   freetype PROPERTIES
     C_VISIBILITY_PRESET hidden)
 
+if (NOT WIN32)
+  target_compile_options(
+    freetype PRIVATE -Wno-shorten-64-to-32)
+endif ()
+
 target_compile_definitions(
   freetype PRIVATE FT2_BUILD_LIBRARY)
 
