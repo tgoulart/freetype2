@@ -179,7 +179,6 @@
 
     for ( i = 0; i < 5; ++i )
     {
-      code = 0;
       if ( FT_READ_BYTE( code ) )
         return error;
 
@@ -929,7 +928,6 @@
     if ( FT_NEW_ARRAY( loca_values, num_glyphs + 1 ) )
       goto Fail;
 
-    points_size        = 0;
     bbox_bitmap_offset = substreams[BBOX_STREAM].offset;
 
     /* Size of bboxBitmap = 4 * floor((numGlyphs + 31) / 32) */
