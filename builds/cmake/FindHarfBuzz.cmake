@@ -90,7 +90,7 @@ if (HarfBuzz_INCLUDE_DIR AND NOT HarfBuzz_VERSION)
     endif ()
 endif ()
 
-if ("${HarfBuzz_FIND_VERSION}" VERSION_GREATER "${HarfBuzz_VERSION}")
+if (HarfBuzz_VERSION AND "${HarfBuzz_FIND_VERSION}" VERSION_GREATER "${HarfBuzz_VERSION}")
   if (HarfBuzz_FIND_REQUIRED)
     message(FATAL_ERROR
       "Required version (" ${HarfBuzz_FIND_VERSION} ")"
